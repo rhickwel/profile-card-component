@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --name-stats-size: 18px;
+    --paragraph-size: 16px
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+
+    font-family: 'Kumbh Sans', arial, sans-serif;
+}
+
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+/* ****** */
+/* LAYOUT */
+/* ****** */
+
+/* background */
+.background{
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    object-fit: contain;
+    opacity: 0.5;
+}
+
+.circle.top{
+    top: 0;
+    left: 0;
+
+    margin-top: -45%;
+    margin-left: -45%;
+}
+
+.circle.bottom{
+    bottom: 0;
+    right: 0;
+
+    margin-bottom: -45%;
+    margin-right: -45%;
+}
+
+/* card */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+
+    cursor: pointer;
+    width: 320px;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.505);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+
+}
+
+.container:hover{
+    transform: scale(1.1);
+}
+
+.information-sec, .stats{
+    text-align: center;
+}
+
+.profile{
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, 70%);
+
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.details{
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+.name, .stats-num{
+    font-size: var(--name-stats-size);
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.stats-title{
+    margin-top: 0.2em;
+    font-size: 14px;
+}
+
+.age{
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+
+.location, .stats-title{
+    color: var(--dark-gray);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
